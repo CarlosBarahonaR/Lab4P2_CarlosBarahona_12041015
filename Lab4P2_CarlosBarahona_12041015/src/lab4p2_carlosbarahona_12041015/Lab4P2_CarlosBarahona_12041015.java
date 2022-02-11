@@ -52,8 +52,8 @@ public class Lab4P2_CarlosBarahona_12041015 {
             switch (opcion) {
                 case 1: {
                     System.out.println("Ingrese el linaje de la familia");
-                    String linaje = r.nextLine();
-                    r.nextLine();
+                    String linaje = r.next();
+
                     for (int x = 0; x < familias.size(); x++) {
                         String nombre = "";
                         if (familias.get(x) instanceof Familia) {
@@ -63,6 +63,7 @@ public class Lab4P2_CarlosBarahona_12041015 {
                             System.out.println("Ingrese el nombre cientifico del animal");
                             linaje = r.nextLine();
                             r.nextLine();
+
                         }
                     }
                     ArrayList<Aldeano> aldeano = new ArrayList();
@@ -71,185 +72,69 @@ public class Lab4P2_CarlosBarahona_12041015 {
                 }
 
                 case 2: {
-                    int opcion2 = 0;
-                    while (opcion2 != 3) {
-                        System.out.println("¿Qué desea hacer?\n"
-                                + "1) Modificar atributo en especifico de animal\n"
-                                + "2) Modificar animal entero\n"
-                                + "3) Salir");
-                        opcion2 = r.nextInt();
-                        switch (opcion2) {
-                            case 1: {
-
-                                System.out.println("Ingrese el nombre cientifico del animal para buscarlo");
-                                String nombreCientifico = r.nextLine();
-                                r.nextLine();
-
-                                int item2 = 0;
-
-                                for (int z = 0; z < animales.size(); z++) {
-                                    String nc = "";
-                                    if (animales.get(z) instanceof Animales) {
-                                        nc = ((Animales) animales.get(z)).getNombreCientifico();
-                                    }
-                                    if (nombreCientifico.equals(nc)) {
-                                        item2 = z;
-                                        z = animales.size();
-                                    } else {
-                                        item2 = 100000;
-                                    }
-                                }
-                                if (item2 <= animales.size()) {
-                                    if (animales.get(item2) instanceof Animales) {
-                                        System.out.println("¿Que desea modificar?\n"
-                                                + "1) Nombre cientifico \n"
-                                                + "2) Nombre comun \n"
-                                                + "3) Habitat \n"
-                                                + "4) Alimentacion \n"
-                                                + "5) Descripcion de rasgos \n"
-                                                + "6) Distribucion geografica \n"
-                                                + "7) Vida\n"
-                                                + "8) Salir");
-
-                                        int opcion3 = r.nextInt();
-
-                                        while (opcion3 != 8) {
-                                            switch (opcion3) {
-                                                case 1: {
-
-                                                    System.out.println("Ingrese el nombre cientifico del animal");
-                                                    String nombreCientifico3 = r.nextLine();
-
-                                                    for (int x = 0; x < animales.size(); x++) {
-                                                        String nombre = "";
-                                                        if (animales.get(x) instanceof Animales) {
-                                                            nombre = ((Animales) animales.get(x)).getNombreCientifico();
-                                                        }
-                                                        while (nombreCientifico3.equals(nombre)) {
-                                                            System.out.println("Ingrese el nombre cientifico del animal");
-                                                            nombreCientifico3 = r.nextLine();
-                                                        }
-                                                    }
-
-                                                    ((Animales) animales.get(item2)).setNombreCientifico(nombreCientifico3);
-
-                                                }
-
-                                                case 2: {
-
-                                                    ((Animales) animales.get(item2)).setNombreComun(r.nextLine());
-                                                    r.nextLine();
-                                                }
-                                                case 3: {
-
-                                                    ((Animales) animales.get(item2)).setHabitat(r.nextLine());
-                                                    r.nextLine();
-
-                                                }
-                                                case 4: {
-
-                                                    ((Animales) animales.get(item2)).setAlimentacion(r.nextLine());
-                                                    r.nextLine();
-                                                }
-                                                case 5: {
-
-                                                    ((Animales) animales.get(item2)).setDescripcionRasgos(r.nextLine());
-                                                    r.nextLine();
-
-                                                }
-                                                case 6: {
-
-                                                    ((Animales) animales.get(item2)).setDescripcionRasgos(r.nextLine());
-                                                    r.nextLine();
-                                                }
-                                                case 7: {
-
-                                                    System.out.println("Ingrese la vida del animal");
-                                                    int vida = r.nextInt();
-
-                                                    for (int y = 0; y < animales.size(); y++) {
-                                                        int vida2 = 0;
-                                                        if (animales.get(y) instanceof Animales) {
-                                                            vida2 = ((Animales) animales.get(y)).getVida();
-                                                        }
-                                                        while (vida2 == vida) {
-                                                            System.out.println("Ingrese la vida del animal");
-                                                            vida = r.nextInt();
-                                                        }
-                                                    }
-                                                    ((Animales) animales.get(item2)).setVida(r.nextInt());
-                                                }
-
-                                            }
-                                        }
-                                    }
-
-                                } else {
-                                    System.out.println("No se encontro el animal que se buscaba");
-                                }
-
-                            }
-
-                            case 2: {
-
-                                System.out.println("Ingrese la posicon de la lista del animal que desea modificar");
-                                int posicion = r.nextInt();
-                                r.nextLine();
-
-                                System.out.println("Ingrese el nombre cientifico del animal");
-                                String nombreCientifico3 = r.nextLine();
-
-                                for (int f = 0; f < animales.size(); f++) {
-                                    String nombre = "";
-                                    if (animales.get(f) instanceof Animales) {
-                                        nombre = ((Animales) animales.get(f)).getNombreCientifico();
-                                    }
-                                    while (nombreCientifico3.equals(nombre)) {
-                                        System.out.println("Ingrese el nombre cientifico del animal");
-                                        nombreCientifico3 = r.nextLine();
-                                    }
-                                }
-                                r.nextLine();
-                                System.out.println("Ingrese el nombre comun del animal");
-                                String nombreComun3 = r.nextLine();
-                                r.nextLine();
-                                System.out.println("Ingrese el habitat del animal");
-                                String habitat3 = r.nextLine();
-                                r.nextLine();
-                                System.out.println("Ingrese la alimentación del animal");
-                                String alimentacion3 = r.nextLine();
-                                r.nextLine();
-                                System.out.println("Ingrese la descripcion del animal");
-                                r.nextLine();
-                                String descripcion3 = r.nextLine();
-                                System.out.println("Ingrese distribucion geografica del animal");
-                                String puesto3 = r.nextLine();
-                                r.nextLine();
-                                System.out.println("Ingrese la vida del animal");
-                                int vida = r.nextInt();
-
-                                for (int j = 0; j < animales.size(); j++) {
-                                    int vida2 = 0;
-                                    if (animales.get(j) instanceof Animales) {
-                                        vida2 = ((Animales) animales.get(j)).getVida();
-                                    }
-                                    while (vida2 == vida) {
-                                        System.out.println("Ingrese la vida del animal");
-                                        vida = r.nextInt();
-                                    }
-                                }
-
-                                Animales animal = new Animales(nombreCientifico3, nombreComun3, habitat3, alimentacion3, descripcion3, puesto3, vida);
-
-                                try {
-
-                                    animales.set(posicion, animal);
-                                } catch (Exception e) {
-                                    System.out.println("La posición establecida para modificar no existe.");
-                                }
+                    int familiaAgregar = 0;
+                    System.out.println("Ingrese el nombre del aldeano");
+                    String nombreAld = r.next();
+                    System.out.println("Ingrese el apellido del aldeano");
+                    String linaje = r.next();
+                    for (int x = 0; x < familias.size(); x++) {
+                        String nombre = "";
+                        if (familias.get(x) instanceof Familia) {
+                            nombre = ((Familia) familias.get(x)).getApellido();
+                        }
+                        if (linaje.equals(nombre)) {
+                            familiaAgregar = x;
+                        } else {
+                            while (!linaje.equals(nombre)) {
+                                System.out.println("Ingrese el apellido a uno de una familia que exista del aldeano");
+                                linaje = r.next();
+                                x = 0;
 
                             }
                         }
+                    }
+                    System.out.println("Ingrese la edad del aldeano");
+                    int edad = r.nextInt();
+                    System.out.println("Ingrese los puntos de vida del aldeano");
+                    int pv = r.nextInt();
+                    System.out.println("Ingrese la profesión del aldeano");
+                    String profesion = r.next();
+                    String respuesta = profesion.toLowerCase();
+                    switch (respuesta) {
+                        case "agronomo": {
+                            Agronomo agronomo = new Agronomo(nombreAld, linaje, edad, pv);
+                            familias.get(familiaAgregar).getAldeano().add(agronomo);
+                            break;
+                        }
+                        case "explosivo": {
+                            Explosivo explosivo = new Explosivo(nombreAld, linaje, edad, pv);
+                            familias.get(familiaAgregar).getAldeano().add(explosivo);
+                            break;
+                        }
+                        case "herrero": {
+                            int valor = pv / 2;
+                            pv = valor;
+
+                            Herrero herrero = new Herrero(nombreAld, linaje, edad, pv);
+                            familias.get(familiaAgregar).getAldeano().add(herrero);
+                            break;
+                        }
+
+                        case "normales": {
+                            Normales normales = new Normales(nombreAld, linaje, edad, pv);
+                            familias.get(familiaAgregar).getAldeano().add(normales);
+                            break;
+                        }
+
+                        case "pacifista": {
+                            System.out.println("Ingrese el discurso del pacifista");
+                            String discurso = r.nextLine();
+                            r.nextLine();
+                            Pacifista pacifista = new Pacifista(discurso, nombreAld, linaje, edad, pv);
+                            familias.get(familiaAgregar).getAldeano().add(pacifista);
+                            break;
+                        }
+
                     }
                     break;
                 }

@@ -9,6 +9,21 @@ package lab4p2_carlosbarahona_12041015;
  *
  * @author Admin
  */
-public class Explosivo {
-    
+public class Explosivo extends Aldeano {
+
+    private final int ataque = 250;
+
+    public Explosivo(String nombre, String apellido, int edad, int puntosVida) {
+        super(nombre, apellido, edad, puntosVida);
+    }
+
+    public int getAtaque() {
+        return ataque;
+    }
+
+    @Override
+    public String toString() {
+        return "Explosivo{" + "ataque=" + ataque + '}';
+    }
+
 }
