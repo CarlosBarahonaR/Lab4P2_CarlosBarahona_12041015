@@ -23,7 +23,7 @@ public class Explosivo extends Aldeano {
 
     @Override
     public String toString() {
-        return "Explosivo{" + "ataque=" + ataque + '}';
+        return "Explosivo{"+ "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", puntosVida=" + puntosVida + "ataque=" + ataque + '}';
     }
 
 }

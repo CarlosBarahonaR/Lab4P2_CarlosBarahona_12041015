@@ -22,7 +22,7 @@ public class Normales extends Aldeano {
 
     @Override
     public String toString() {
-        return "Normales{" + "ataque=" + ataque + '}';
+        return "Normales{"+ "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", puntosVida=" + puntosVida + "ataque=" + ataque + '}';
     }
     
     

@@ -23,7 +23,7 @@ public class Herrero extends Aldeano {
 
     @Override
     public String toString() {
-        return "Herrero{" + "ataque=" + ataque + '}';
+        return "Herrero{"+ "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", puntosVida=" + puntosVida + "ataque=" + ataque + '}';
     }
 
 }

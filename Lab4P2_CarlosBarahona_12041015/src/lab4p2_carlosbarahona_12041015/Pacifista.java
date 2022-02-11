@@ -27,7 +27,7 @@ public class Pacifista extends Aldeano {
 
     @Override
     public String toString() {
-        return "Pacifista{" + "discurso=" + discurso + '}';
+        return "Pacifista{"+ "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", puntosVida=" + puntosVida + "discurso=" + discurso + '}';
     }
     
     

@@ -20,9 +20,11 @@ public class Lab4P2_CarlosBarahona_12041015 {
     public static void main(String[] args) {
         // TODO code application logic here
         ArrayList<Aldeano> aldeanos = new ArrayList();
+        ArrayList<Aldeano> aldeanos2 = new ArrayList();
+        ArrayList<Aldeano> aldeanos3 = new ArrayList();
         Familia montesco = new Familia("Montesco", aldeanos);
-        Familia capuleto = new Familia("Capuleto", aldeanos);
-        Familia farnese = new Familia("Farnese", aldeanos);
+        Familia capuleto = new Familia("Capuleto", aldeanos2);
+        Familia farnese = new Familia("Farnese", aldeanos3);
 
         montesco.getAldeano().add(new SuperGranjero("Romeo", "Montesco", 18, 1000));
         montesco.getAldeano().add(new Herrero("Josue", "Montesco", 20, 500));
@@ -47,7 +49,7 @@ public class Lab4P2_CarlosBarahona_12041015 {
                     + "1) Crear Familia\n"
                     + "2) Crear Aldeano\n"
                     + "3) Imprimir Familias\n"
-                    + "4) Pelear\n");
+                    + "4) Pelear");
             opcion = r.nextInt();
             switch (opcion) {
                 case 1: {

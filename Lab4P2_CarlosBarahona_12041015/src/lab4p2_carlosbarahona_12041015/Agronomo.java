@@ -23,7 +23,7 @@ public class Agronomo extends Aldeano {
 
     @Override
     public String toString() {
-        return "Agronomo{" + "ataque=" + ataque + '}';
+        return "Agronomo{"+ "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", puntosVida=" + puntosVida  + "ataque=" + ataque + '}';
     }
 
 }

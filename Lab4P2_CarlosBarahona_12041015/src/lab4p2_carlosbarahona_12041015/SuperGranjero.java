@@ -23,7 +23,7 @@ public class SuperGranjero extends Aldeano {
 
     @Override
     public String toString() {
-        return "SuperGranjero{" + "ataque=" + ataque + '}';
+        return "SuperGranjero{"+ "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", puntosVida=" + puntosVida + "ataque=" + ataque + '}';
     }
 
 }
